@@ -3,7 +3,7 @@ import { ICategory } from "./Categories";
 export interface IFilm {
     id: number;
     title : string;
-    catgory : ICategory[];
+    category : ICategory[];
     img : string
     overview:string
 }
