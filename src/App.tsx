@@ -23,6 +23,7 @@ const test:IFilm = {
 
 
 function App() {
+  console.log(process.env)
   return ( 
     <Card  dataFilm={test}></Card>
   );
