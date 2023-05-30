@@ -4,14 +4,16 @@ import { IFilm } from "../models/Film";
 
 type CardProps = {dataFilm : IFilm}
 
-export const Card = ({ dataFilm }: CardProps ) => {
+export const Card = ({ dataFilm }: CardProps) => {
   return (
-    <figure>
-        <img src={dataFilm.img}/>
-        <figcaption>
-            <div>{dataFilm.title}</div>
-        </figcaption>
-    </figure>
-
+    <div className="center">
+      <div className="article-card">
+        <div className="content">
+          <p className="title">{dataFilm.title}</p>
+        </div>
+        <img src={dataFilm.img} alt="article-cover" />
+      </div>
+    </div>
   );
 };
+
