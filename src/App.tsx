@@ -1,10 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
-import {Card} from './Home/Card'
+
+import {Card} from './pages/Home/components/Card'
 import { IFilm } from "./models/Film";
 import { ICategory } from './models/Categories';
+import {Header} from '././components/Header'
+
+const appLogo = 'applogo.png';
 
 const horror:ICategory[] = [
   {
@@ -21,11 +25,13 @@ const test:IFilm = {
   overview: "C'est nul"
 }
 
-
 function App() {
   console.log(process.env)
-  return ( 
-    <Card  dataFilm={test}></Card>
+  return (
+    <>
+    <Header logo={appLogo}/>
+    <Card dataFilm={test}></Card>
+    </>
   );
 }
 
