@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import {Card} from './Home/Card'
+import {Card} from './page/Home/Card'
 import { IFilm } from "./models/Film";
 import { ICategory } from './models/Categories';
 

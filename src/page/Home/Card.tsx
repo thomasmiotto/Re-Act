@@ -1,6 +1,6 @@
 import React from "react"
 import './Card.css'
-import { IFilm } from "../models/Film";
+import { IFilm } from "../../models/Film";
 
 type CardProps = {dataFilm : IFilm}
 
