@@ -14,12 +14,9 @@ export const Card = ({ dataMovie }: CardProps) => {
         <div className="content">
           <p className="title">{dataMovie.title}</p>
         </div>
-
-        <img src={`${imgUrl}${dataMovie.backdrop_path}`} alt="article-cover" />
-
+        <img src={`${imgUrl}${dataMovie.poster_path}`} alt="article-cover" />
       </div>
     </div>
   );
 };
 
-//{dataMovie.genre_ids.map(id => `${id},`)}
