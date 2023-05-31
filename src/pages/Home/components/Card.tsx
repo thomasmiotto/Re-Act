@@ -20,4 +20,3 @@ export const Card = ({ dataMovie }: CardProps) => {
   );
 };
 
-//{dataMovie.genre_ids.map(id => `${id},`)}
