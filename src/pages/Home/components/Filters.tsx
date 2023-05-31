@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { Button } from './Button';
 
 import { getGenreList } from '../../../api/ACategories';
-import { ICategory } from '../../../models/Categories';
+import { IGenre } from '../../../models/IGenre';
 
 const topRated = "top_rated";
 const nowPlayingUrl = "now_playing";
@@ -15,7 +15,7 @@ type filtersProps = {
 }
 
 export const Filters = ({ getClickedCategory, getClickedGenre }: filtersProps) => {
-    const [genres, setGenres] = useState<ICategory[]>([]);
+    const [genres, setGenres] = useState<IGenre[]>([]);
 
     const getList = async () => {
         const result = await getGenreList();

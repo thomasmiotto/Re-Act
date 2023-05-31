@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './Home.css'
 
-import { IFilm } from "../../models/Film";
+import { IMovie } from "../../models/IMovie";
 import { CardsList } from './components/CardsList';
 import { Button } from './components/Button';
 
@@ -12,7 +12,7 @@ import { Filters } from './components/Filters';
 // type homeProps = {}
 
 export const Home = () => {
-    const [movieList, setMovieList] = useState<IFilm[]>([]);
+    const [movieList, setMovieList] = useState<IMovie[]>([]);
     const [category, setCategory] = useState<string | undefined>(undefined);
     const [genreList, setGenreList] = useState<string[] | undefined>(undefined);
 

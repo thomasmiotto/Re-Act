@@ -1,0 +1,43 @@
+header{
+    background-color: #1d1d1d;
+    height: 7em;
+    color: #FFFFFF;
+    display: flex;
+}
+
+.nameLogo{
+    display: flex;
+}
+
+header .motto{
+    display: none;
+}
+
+header img{
+    width: 150px;
+}
+
+h1{
+    font-size: 3em;
+    margin-left: 15px;
+    margin-top: 22px;
+}
+
+@media (min-width: 751px){
+    header{
+        margin: 2% 10%;
+        border-radius: 45px;
+        align-items: center;
+        /* width: 1250px; */
+        width: 80%;
+    }
+
+    header .motto{
+        display: inline;
+    }
+
+    header p{
+        margin-left: 150px;
+        font-size: 1.5em;
+    }
+}

@@ -1,6 +1,6 @@
 import React from "react"
 import axios from "axios"
-import { IFilm } from "../models/Film"
+import { IMovie } from "../models/IMovie"
 
 export const getMovieList = async (listName:string = "top_rated") => {
     const urlCall = `${process.env.REACT_APP_API_URL}/movie/${listName}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${1}`
@@ -8,7 +8,7 @@ export const getMovieList = async (listName:string = "top_rated") => {
     console.log("getmovielist")
     
     return axios
-      .get <{ results: IFilm[] }> (urlCall)
+      .get <{ results: IMovie[] }> (urlCall)
       .then((response) => {
         return response.data;
       })
@@ -24,7 +24,7 @@ export const getMovieListByGenre = async (genreList:string = "") => {
   console.log(urlCall);
 
   return axios
-    .get <{ results: IFilm[] }> (urlCall)
+    .get <{ results: IMovie[] }> (urlCall)
     .then((response) => {
       return response.data;
     })

@@ -1,6 +1,8 @@
+import React from 'react';
 import './App.css';
 
-import { Home } from './page/home/Home';
+import { Home } from './pages/Home/Home';
+import { Header } from './componentsShared/Header';
 
 
 
@@ -8,8 +10,13 @@ import { Home } from './page/home/Home';
 function App() {
 
   return (
-    <Home />
+    <body>
+      <Header />
+      <Home />
+    </body>
   );
 }
+
+
 
 export default App;
