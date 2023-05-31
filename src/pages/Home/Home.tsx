@@ -14,7 +14,7 @@ import { Filters } from './components/Filters';
 export const Home = () => {
     const [movieList, setMovieList] = useState<IMovie[]>([]);
     const [category, setCategory] = useState<string | undefined>(undefined);
-    const [genreList, setGenreList] = useState<string[] | undefined>(undefined);
+    const [genreList, setGenreList] = useState<string[]>([]);
 
     const getList = async (listName: string = "now_playing") => {
         const result = await getMovieList(listName);
@@ -25,16 +25,46 @@ export const Home = () => {
         }
     }
     
-    useEffect(() => {
-        getList(category);
-    }, [category]);
-    
     const getClickedCategory = (category: string) => {
         setCategory(category);
     }
-    
-    const getGenre = async (genreList: string = "now_playing") => {
+
+    useEffect(() => {
+        getList(category);
+    }, [category]);
+
+    const getClickedGenre = (genreId: string) => {
+        console.log("--------------enter btn-----------")
+        console.log(`Value of id: ${genreId}`);
+        console.log(genreList);
+
         if (genreList) {
+            console.log("if")
+            if (genreList.includes(genreId)){console.log("if if")
+                const bouh = genreList.filter((genre) => genre != genreId);
+                console.log("bouh = ", bouh);
+                setGenreList(bouh);
+            }
+            else {
+                console.log("if elfe")
+                genreList.push(genreId);
+                setGenreList(genreList);
+                console.log("genre list", genreList);
+            }
+        }
+        else {console.log("else")
+            setGenreList([genreId]);}
+        console.log("--------------click-----------")
+
+        console.log(genreList);
+        console.log("--------------exit btn-----------")
+    }
+
+    const getGenre = async (genreList: string) => {
+        console.log(`getgenre : ${genreList} >`)
+    
+        if (genreList) {
+            console.log("getgenrr if")
             const result = await getMovieListByGenre(genreList);
             if (result != null) {
                 setMovieList(result.results);
@@ -44,23 +74,9 @@ export const Home = () => {
         }
     }
 
-    const getClickedGenre = (genreId: string) => {
-        if (genreList) {
-            if (genreList.includes(genreId))
-                setGenreList(genreList.filter((genre) => genre != genreId));
-            else
-                genreList.push(genreId);
-
-        }
-        else 
-            setGenreList([genreId]);
-        console.log(genreList);
-    }
-
-
-    // useEffect(() => {
-    //     getGenre(genreList?.toString());
-    // }, [genreList])
+    useEffect(() => {
+        getGenre(genreList.toString());
+    }, [genreList])
 
     return (
         <section>

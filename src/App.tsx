@@ -10,10 +10,10 @@ import { Header } from './componentsShared/Header';
 function App() {
 
   return (
-    <body>
+    <section>
       <Header />
       <Home />
-    </body>
+    </section>
   );
 }
 

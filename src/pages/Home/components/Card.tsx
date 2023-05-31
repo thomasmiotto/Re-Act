@@ -1,5 +1,7 @@
 import React from "react"
-import './Card.css'
+// import './Card.css'
+
+import './test.css'
 
 import { IMovie } from "../../../models/IMovie";
 
@@ -14,7 +16,8 @@ export const Card = ({ dataMovie }: CardProps) => {
         <div className="content">
           <p className="title">{dataMovie.title}</p>
         </div>
-        <img src={`${imgUrl}${dataMovie.backdrop_path}`} alt="article-cover" />
+        {/* <img src={`${imgUrl}${dataMovie.poster_path}`} alt="article-cover" /> */}
+        {dataMovie.genre_ids.map(id => `${id},`)}
       </div>
     </div>
   );
