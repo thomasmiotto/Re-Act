@@ -34,7 +34,6 @@ export const Home = () => {
     }, [category]);
 
     const getClickedGenre = (genreId: string) => {
-
         const clone = [...genreList];
 
         if (clone.includes(genreId)){
@@ -45,8 +44,6 @@ export const Home = () => {
             clone.push(genreId);
             setGenreList(clone);
         }
-        
-       
     }
 
     const getGenre = async (genreList: string) => {
@@ -57,6 +54,9 @@ export const Home = () => {
             else 
                 console.log('Error get genre');
         }
+        else {
+            getList()
+        }
     }
 
     useEffect(() => {
@@ -66,6 +66,7 @@ export const Home = () => {
     return (
         <section>
             <Filters getClickedCategory={getClickedCategory} getClickedGenre={getClickedGenre}/>
+            {genreList.join(',')}
             <hr />
             <CardsList movies={movieList} />
         </section>
