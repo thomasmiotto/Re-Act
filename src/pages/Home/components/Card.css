@@ -9,7 +9,7 @@
   
   .article-card {
     width: 300px;
-    height: 375px;
+    height: 450px;
     border-radius: 12px;
     overflow: hidden;
     position: relative;
@@ -47,10 +47,17 @@
     margin: 0;
   }
 
-  @media (min-width: 751px) {
+  .title{
+    background-color: rgba(0, 0, 0, 0.1); /* Couleur de fond semi-transparente */
+    backdrop-filter: blur(1px); /* Valeur du flou */
+    color: white; /* Couleur du texte */
+    border-radius: 10px;
+  }
+
+  /* @media (min-width: 751px) {
     .article-card {
       width: 200px;
       height: 250px;
     }
-  }
+  } */
   
