@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import './Home.css'
 
 import { IMovie } from "../../models/IMovie";
-import { CardsList } from './components/CardsList';
+import { CardsList } from './components/CardList';
 import { Button } from './components/Button';
 
 //API
