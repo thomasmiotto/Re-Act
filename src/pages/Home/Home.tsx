@@ -34,43 +34,28 @@ export const Home = () => {
     }, [category]);
 
     const getClickedGenre = (genreId: string) => {
-        console.log("--------------enter btn-----------")
-        console.log(`Value of id: ${genreId}`);
-        console.log(genreList);
 
-        if (genreList) {
-            console.log("if")
-            if (genreList.includes(genreId)){console.log("if if")
-                const bouh = genreList.filter((genre) => genre != genreId);
-                console.log("bouh = ", bouh);
-                setGenreList(bouh);
-            }
-            else {
-                console.log("if elfe")
-                genreList.push(genreId);
-                setGenreList(genreList);
-                console.log("genre list", genreList);
-            }
+        const clone = [...genreList];
+
+        if (clone.includes(genreId)){
+            const bouh = clone.filter((genre) => genre != genreId);
+            setGenreList(bouh);
         }
-        else {console.log("else")
-            setGenreList([genreId]);}
-        console.log("--------------click-----------")
-
-        console.log(genreList);
-        console.log("--------------exit btn-----------")
+        else {
+            clone.push(genreId);
+            setGenreList(clone);
+        }
+        
+       
     }
 
     const getGenre = async (genreList: string) => {
-        console.log(`getgenre : ${genreList} >`)
-    
-        if (genreList) {
-            console.log("getgenrr if")
+        if (genreList.length > 0) {
             const result = await getMovieListByGenre(genreList);
-            if (result != null) {
+            if (result != null)
                 setMovieList(result.results);
-            } else {
+            else 
                 console.log('Error get genre');
-            }
         }
     }
 
