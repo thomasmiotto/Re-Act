@@ -2,11 +2,14 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 import {Card} from './pages/Home/components/Card'
-import { IFilm } from "./models/Film";
+import { IMovie } from "./models/Movie";
 import { ICategory } from './models/Categories';
 import {Header} from '././components/Header'
+import { Button } from './pages/Home/components/Button';
 
 const appLogo = 'applogo.png';
 
@@ -17,7 +20,7 @@ const horror:ICategory[] = [
   },
 ]
 
-const test:IFilm = {
+const test:IMovie = {
   id: 1,
   title: "Bouh",
   category: horror,
@@ -28,12 +31,35 @@ const test:IFilm = {
 function App() {
   console.log(process.env)
   return (
-    <>
-    <Header logo={appLogo}/>
-    <Card dataFilm={test}></Card>
-    </>
+    <BrowserRouter>
+     <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/CardDetails" element={<CardDetails />} />
+      </Routes>
+   
+    </BrowserRouter>
   );
 }
+
+const Home = () => {
+  return (
+    <div>
+      <Header logo={appLogo}/>
+      <Button/>
+    <Card dataMovie={test}/>
+    </div>
+  );
+};
+
+const CardDetails = () => {
+  return (
+    <div>
+      <Header logo={appLogo}/>
+      <Button/>
+    </div>
+  );
+};
+
 
 
 

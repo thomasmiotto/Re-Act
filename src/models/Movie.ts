@@ -1,6 +1,6 @@
 import { ICategory } from "./Categories";
 
-export interface IFilm {
+export interface IMovie {
     id: number;
     title : string;
     category : ICategory[];

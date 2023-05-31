@@ -1,18 +1,18 @@
 import React from "react"
 import './Card.css'
 
-import { IFilm } from "../../models/Film";
+import { IMovie } from "../../../models/Movie";
 
-type CardProps = {dataFilm : IFilm}
+type CardProps = {dataMovie : IMovie}
 
-export const Card = ({ dataFilm }: CardProps) => {
+export const Card = ({ dataMovie }: CardProps) => {
   return (
     <div className="center">
       <div className="article-card">
         <div className="content">
-          <p className="title">{dataFilm.title}</p>
+          <p className="title">{dataMovie.title}</p>
         </div>
-        <img src={dataFilm.img} alt="article-cover" />
+        <img src={dataMovie.img} alt="article-cover" />
       </div>
     </div>
   );
