@@ -4,6 +4,8 @@ import { Button } from './Button';
 import { getGenreList } from '../../../api/ACategories';
 import { IGenre } from '../../../models/IGenre';
 
+import './Button.css'
+
 const topRated = "top_rated";
 const nowPlayingUrl = "now_playing";
 const upComingUrl = "upcoming";
@@ -32,9 +34,11 @@ export const Filters = ({ getClickedCategory, getClickedGenre }: filtersProps) =
 
     return (<section id="filter">
         <div id='categories-list'>
+            <div className="container">
             <Button value="Now Playing" action={() => getClickedCategory(nowPlayingUrl)} />
             <Button value="Upcoming" action={() => getClickedCategory(upComingUrl)} />
             <Button value="Top Rated" action={() => getClickedCategory(topRated)} />
+        </div>
         </div>
         <div id="genre-list">
             { genres.map( genre => <button onClick={()=> getClickedGenre(genre.id.toString())} key={genre.id}>{genre.name}</button>) }

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Button.css'
+import "./Button.css"
 
 
 type buttonProps = {
@@ -9,7 +9,7 @@ type buttonProps = {
 
 export const Button = ({value, action}: buttonProps) => {
     return (
-        <button className="btn-test" onClick={action}>{value}</button>
+        <button className="button-24" onClick={action}>{value}</button>
     )
 }
 
