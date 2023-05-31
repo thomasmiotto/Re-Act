@@ -1,12 +1,12 @@
 import React from 'react';
-import './Button.css'
 
-export const Button = () => {
+type buttonProps = {
+    value: string;
+    action: (...args: any) => void;
+}
+
+export const Button = ({value, action}: buttonProps) => {
     return (
-      <div className="container">
-       <button className="button-24">Recent</button>
-       <button className="button-24">Upcoming</button>
-       <button className="button-24">Popular</button>
-      </div>
-    );
-  };
+        <button className="btn-test" onClick={action}>{value}</button>
+    )
+}

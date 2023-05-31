@@ -1,11 +1,13 @@
 import React from 'react';
 import './Header.css';
 
-export type HeaderProps = {
-    logo: string;
-}
+// export type HeaderProps = {
+// }
 
-export const Header = ({logo}: HeaderProps) => {
+
+export const Header = () => {
+    const logo = "applogo.png";
+
     return (
         <header>
             <div className='nameLogo'>
