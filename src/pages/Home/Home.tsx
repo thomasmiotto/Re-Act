@@ -72,6 +72,7 @@ export const Home = () => {
             <hr />
             <CardsList movies={movieList} />
             
+            
         </section>
     )
 }

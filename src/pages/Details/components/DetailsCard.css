@@ -1,0 +1,36 @@
+.detailsMovie {
+    background-color: #545454;
+    color: #FFFF;
+}
+
+.detailsMovie h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.detailsMovie img {
+    width: 350px;
+    border-radius: 25px;
+}
+
+.overview {
+    text-align: justify;
+    padding: 15px;
+    font-size: 1.1em;
+}
+
+@media (min-width: 751px) {
+    .detailsMovie h2 {
+        font-size: 2.5em;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 2%;
+    }
+
+    .overview {
+        font-size: 1.3em;
+    }
+}
