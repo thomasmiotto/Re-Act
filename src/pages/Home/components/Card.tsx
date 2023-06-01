@@ -1,5 +1,6 @@
 import React from "react"
 import './Card.css'
+import { Link } from "react-router-dom";
 
 import { IMovie } from "../../../models/IMovie";
 
@@ -12,9 +13,10 @@ export const Card = ({ dataMovie }: CardProps) => {
     <div className="center">
       <div className="article-card">
         <div className="content">
-          <p className="title">{dataMovie.title}</p>
+          {/* <p className="title">{dataMovie.title}</p> */}
+         <p className="title">{dataMovie.title}</p>
         </div>
-        <img src={`${imgUrl}${dataMovie.poster_path}`} alt="article-cover" />
+        <Link to={`movie/${dataMovie.id}`}><img src={`${imgUrl}${dataMovie.poster_path}`} alt="article-cover" /></Link>
       </div>
     </div>
   );

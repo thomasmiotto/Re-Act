@@ -27,3 +27,19 @@ export const getMovieListByGenre = async (genreList:string = "") => {
       console.log(error);
     });
 }
+
+export const getAMovie = async (movieId: string | undefined) => {
+  if (movieId == null) return;
+
+  const urlCall = `${process.env.REACT_APP_API_URL}/movie/${movieId}?api_key=${process.env.REACT_APP_API_KEY}`
+
+  return axios
+  .get <IMovie> (urlCall)
+  .then((response) => {
+    return response.data;
+  })
+  .catch((error)=> {
+    console.log(error);
+  });
+  
+}
