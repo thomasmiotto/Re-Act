@@ -60,4 +60,8 @@
       height: 250px;
     }
   } */
+
+  .active {
+    color: blue;
+  }
   

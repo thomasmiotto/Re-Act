@@ -12,7 +12,7 @@ export const Header = () => {
         <header>
             <div className='nameLogo'>
                 <img src={logo} alt="logo de l'application"></img>
-                <h1>Re-Act</h1>
+                <h1>ReAct</h1>
             </div>
             <p className='motto'>Re-view and react with your friends all your favorite movies</p>
         </header>
