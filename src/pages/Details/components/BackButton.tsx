@@ -13,7 +13,7 @@ export const BackButton = () => {
     return (
         <>
         <Link to="/">
-        <button className="button1" onClick={() => {setBackHome(true)}}>Back</button>
+        <button className="buttonCateg" onClick={() => {setBackHome(true)}}>Back</button>
         </Link>
         </>
         
