@@ -1,0 +1,21 @@
+.containerCateg{
+    padding-bottom: 30px;
+    padding-top: 30px;
+    display: flex;  
+    align-items: center;
+    justify-content: center; 
+    background-color: #545454;
+     gap : 10px;
+     flex-wrap: wrap;
+}
+
+.containerGenre{
+    display: flex;
+    background-color: #545454;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+  }

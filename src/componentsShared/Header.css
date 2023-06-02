@@ -30,14 +30,24 @@ h1{
         align-items: center;
         /* width: 1250px; */
         width: 80%;
+        display: flex;
+        justify-content: space-between;
     }
 
     header .motto{
         display: inline;
+        margin: 0 auto;
+        padding: 0 40px;
     }
 
     header p{
-        margin-left: 150px;
+        margin-left: 50px;
+        font-size: 1.3em;
+    }
+}
+
+@media (min-width: 1190px){
+    header p{
         font-size: 1.5em;
     }
 }

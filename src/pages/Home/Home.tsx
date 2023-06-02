@@ -3,7 +3,6 @@ import './Home.css'
 
 import { IMovie } from "../../models/IMovie";
 import { CardsList } from './components/CardList';
-import { Button } from './components/Button';
 import { Card } from './components/Card';
 import { Header } from '../../componentsShared/Header';
 //API
@@ -69,9 +68,7 @@ export const Home = () => {
             <Filters getClickedCategory={getClickedCategory} getClickedGenre={getClickedGenre}/>
             {genreList.join(',')}
             <hr />
-            <CardsList movies={movieList} />
-            
-            
+            <CardsList movies={movieList} />             
         </section>
     )
 }

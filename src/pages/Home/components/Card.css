@@ -1,10 +1,7 @@
  .center {
     display: flex;  
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
     background-color: #545454;
-    padding: 20px 0px;
+    padding: 20px 20px;
   }
   
   .article-card {

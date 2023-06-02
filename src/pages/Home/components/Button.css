@@ -1,15 +1,4 @@
-.container1{
-    padding-bottom: 30px;
-    padding-top: 30px;
-    display: flex;  
-    align-items: center;
-    justify-content: center; 
-    background-color: #545454;
-     gap : 10px;
-     flex-wrap: wrap;
-}
-
-.button1 {
+.buttonCateg {
   background: linear-gradient(to right, #ff603c, #ff3c35);  
   border : 2px solid #ff4e3a;
   border-radius: 20px;
@@ -35,7 +24,7 @@
 }
 
 
-.active1 {
+.activeCateg {
   background: linear-gradient(to right, #ff603c, #ff3c35);  
   border : 2px solid #ffffff;
   font-size: 16px;
@@ -50,18 +39,9 @@
 } */
 
 
-.container2{
-  display: flex;
-  background-color: #545454;
-  gap: 10px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 20px;
-}
 
-.button2 {
+
+.buttonGenre {
   background: linear-gradient(to right, #ff433c, #ff3c35);  
 border: 2px solid #4c4c4c;
 border-radius: 7px;
@@ -87,7 +67,7 @@ vertical-align: middle;
 }
 
 
-.active2 {
+.activeGenre {
   background: linear-gradient(to right, #ff433c, #ff3c35);  
 border : 2px solid #FFFFFF;
 }
