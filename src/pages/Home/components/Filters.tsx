@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import { Button, Button2 } from './Button';
+import { ButtonCateg, ButtonGenre } from './Button';
 
 import { getGenreList } from '../../../api/ACategories';
 import { IGenre } from '../../../models/IGenre';
 
-import './Button.css'
+import './Filters.css'
 
 const topRated = "top_rated";
 const nowPlayingUrl = "now_playing";
@@ -34,14 +34,14 @@ export const Filters = ({ getClickedCategory, getClickedGenre }: filtersProps) =
 
     return (<section id="filter">
         <div id='categories-list'>
-            <div className="container1">
-            <Button value="Now Playing" action={() => getClickedCategory(nowPlayingUrl)} />
-            <Button value="Upcoming" action={() => getClickedCategory(upComingUrl)} />
-            <Button value="Top Rated" action={() => getClickedCategory(topRated)} />
+            <div className="containerCateg">
+            <ButtonCateg value="Now Playing" action={() => getClickedCategory(nowPlayingUrl)} />
+            <ButtonCateg value="Upcoming" action={() => getClickedCategory(upComingUrl)} />
+            <ButtonCateg value="Top Rated" action={() => getClickedCategory(topRated)} />
         </div>
         </div>
-        <div className = "container2" id="genre-list">
-        {genres.map( genre => (<Button2 key={genre.id}value={genre.name}action={() => getClickedGenre(genre.id.toString())}/>))}
+        <div className = "containerGenre" id="genre-list">
+        {genres.map( genre => (<ButtonGenre key={genre.id}value={genre.name}action={() => getClickedGenre(genre.id.toString())}/>))}
       </div>
 
 

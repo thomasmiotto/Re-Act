@@ -6,7 +6,7 @@ interface ButtonProps {
   action: (...args: any) => void;
 }
 
-export const Button = ({ value, action }: ButtonProps) => {
+export const ButtonCateg = ({ value, action }: ButtonProps) => {
   const [isActive, setIsActive] = useState(false);
 
   const handleClick = () => {
@@ -16,14 +16,14 @@ export const Button = ({ value, action }: ButtonProps) => {
 
   return (
     <button
-      className={`button1 ${isActive ? 'active1' : ''}`}
+      className={`buttonCateg ${isActive ? 'activeCateg' : ''}`}
       onClick={handleClick}>
       {value}
     </button>
   );
 };
 
-export const Button2 = ({ value, action }: ButtonProps) => {
+export const ButtonGenre = ({ value, action }: ButtonProps) => {
     const [isActive, setIsActive] = useState(false);
   
     const handleClick = () => {
@@ -33,7 +33,7 @@ export const Button2 = ({ value, action }: ButtonProps) => {
   
     return (
       <button
-        className={`button2 ${isActive ? 'active2' : ''}`}
+        className={`buttonGenre ${isActive ? 'activeGenre' : ''}`}
         onClick={handleClick}>
         {value}
       </button>
