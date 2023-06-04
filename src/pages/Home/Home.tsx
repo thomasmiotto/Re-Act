@@ -8,6 +8,7 @@ import { Header } from '../../componentsShared/Header';
 //API
 import { getMovieList, getMovieListByGenre } from '../../api/AMovie';
 import { Filters } from './components/Filters';
+import {SearchBar} from './components/Search';
 
 // type homeProps = {}
 
@@ -68,6 +69,7 @@ export const Home = () => {
             <Filters getClickedCategory={getClickedCategory} getClickedGenre={getClickedGenre}/>
             {genreList.join(',')}
             <hr />
+            <SearchBar></SearchBar>
             <CardsList movies={movieList} />             
         </section>
     )

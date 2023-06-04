@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+/* import React, { useState } from 'react';
 import axios from 'axios';
 
 interface SearchBarProps {
@@ -37,4 +37,8 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
   );
 };
 
-export default SearchBar;
+export default SearchBar; */
+
+.searchResult{
+  width: 30%;
+}
