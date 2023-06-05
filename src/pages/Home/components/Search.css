@@ -1,11 +1,10 @@
-/* .searchResult{
+.searchResult{
   width: 30%;
-} */
+}
 .search{
   width: 450px;
   margin: 0 2%;
 }
-
 .search input{
   width: 250px;
   height: 35px;
