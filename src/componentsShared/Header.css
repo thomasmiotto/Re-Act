@@ -37,12 +37,14 @@ h1{
     header .motto{
         display: inline;
         margin: 0 auto;
-        padding: 0 40px;
+        padding: 0 20px 0 40px;
+        text-align: center;
     }
 
     header p{
-        margin-left: 50px;
+      
         font-size: 1.3em;
+      
     }
 }
 
