@@ -5,6 +5,7 @@ import { getGenreList } from '../../../api/ACategories';
 import { IGenre } from '../../../models/IGenre';
 
 import './Filters.css';
+import { SearchBar } from './Search';
 
 const topRated = "top_rated";
 const nowPlayingUrl = "now_playing";
@@ -60,7 +61,10 @@ export const Filters = ({ getClickedCategory, getClickedGenre }: filtersProps) =
             action={() => handleCategoryClick(topRated)}
             isActive={activeButtonId === topRated}
           />
+        <SearchBar/>
+
         </div>
+
       </div>
       <div className="containerGenre" id="genre-list">
         {genres.map((genre) => (
