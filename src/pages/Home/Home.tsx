@@ -69,7 +69,6 @@ export const Home = () => {
             <Filters getClickedCategory={getClickedCategory} getClickedGenre={getClickedGenre}/>
             {genreList.join(',')}
             <hr />
-            <SearchBar></SearchBar>
             <CardsList movies={movieList} />             
         </section>
     )
