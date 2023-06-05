@@ -1,12 +1,14 @@
-.containerCateg{
-    padding-bottom: 30px;
-    padding-top: 30px;
-    display: flex;  
-    align-items: center;
-    justify-content: center; 
-    background-color: #545454;
-     gap : 10px;
-     flex-wrap: wrap;
+.containerCateg {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  gap: 10px;
+  flex-wrap: wrap;
+  background-color: #393939;
+  margin: 10px 5% 10px 5%;
+  border-radius: 30px;
 }
 
 .containerGenre{
@@ -19,3 +21,19 @@
     align-items: center;
     padding-bottom: 20px;
   }
+
+  @media (min-width: 500px) {
+    .containerCateg {
+      margin: 10px 15% 10px 15%;
+
+    }
+  }
+
+  @media (min-width: 751px) {
+    .containerCateg {
+      margin: 10px 25% 10px 25%;
+
+    }
+  }
+
+  
