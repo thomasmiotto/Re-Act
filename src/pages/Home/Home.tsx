@@ -3,6 +3,7 @@ import './Home.css'
 
 import { IMovie } from "../../models/IMovie";
 import { CardsList } from './components/CardList';
+// remove unused imports, it would be lighter
 import { Card } from './components/Card';
 import { Header } from '../../componentsShared/Header';
 //API
@@ -17,10 +18,13 @@ export const Home = () => {
     const [category, setCategory] = useState<string | undefined>(undefined);
     const [genreList, setGenreList] = useState<string[]>([]);
 
+    // Careful with the names of the functions, it should be obvious what list
+    // we are talking about 
     const getList = async (listName: string = "now_playing") => {
         const result = await getMovieList(listName);
         if (result != null) {
             setMovieList(result.results);
+        // Useless to ass an else
         } else {
             console.log('Error get all');
         }
@@ -34,6 +38,7 @@ export const Home = () => {
         getList(category);
     }, [category]);
 
+    // Ok nice one :)
     const getClickedGenre = (genreId: string) => {
         const clone = [...genreList];
 
@@ -47,6 +52,7 @@ export const Home = () => {
         }
     }
 
+    // Get by genre would be more explicit
     const getGenre = async (genreList: string) => {
         if (genreList.length > 0) {
             const result = await getMovieListByGenre(genreList);
