@@ -65,7 +65,7 @@ export const Home = () => {
     }, [genreList])
 
     return (
-        <section>
+        <section className='section_cards'>
             <Filters getClickedCategory={getClickedCategory} getClickedGenre={getClickedGenre}/>
             {genreList.join(',')}
             <hr />
