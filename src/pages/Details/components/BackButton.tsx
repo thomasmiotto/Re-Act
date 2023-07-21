@@ -13,7 +13,9 @@ export const BackButton = () => {
     return (
         <>
         <Link to="/">
+            <div className="container_back">
         <button className="buttonCateg" onClick={() => {setBackHome(true)}}>Back</button>
+        </div>
         </Link>
         </>
         

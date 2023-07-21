@@ -23,6 +23,13 @@
   vertical-align: middle;
 }
 
+.container_back {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  
+}
+
 
 .activeCateg {
   background: linear-gradient(to right, #ff603c, #ff3c35);  
